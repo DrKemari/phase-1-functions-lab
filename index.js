@@ -6,21 +6,27 @@ function distanceFromHqInBlocks(station) {
     console.log(distanceFromHqInBlocks(50)); // 8
     console.log(distanceFromHqInBlocks(43)); // 1
     console.log(distanceFromHqInBlocks(34)); // 8
-    // console.log(distanceFromHqInBlocks())
 
 
-    function distanceFromHqInFeet(station) {
+function distanceFromHqInFeet(station) {
         const blocks = distanceFromHqInBlocks(station);
         const feet = blocks * 264;
         return feet;
       }
-      console.log(distanceFromHqInFeet())
+      console.log(distanceFromHqInFeet(50)); // 2112
+      console.log(distanceFromHqInFeet(34)); // 2112
+      console.log(distanceFromHqInFeet(43)); // 264
+      
 
-  function distanceTravelledInFeet(start, destination) {
+function distanceTravelledInFeet(start, destination) {
     //returns the number of feet traveled
     const travel = Math.abs(destination - start) * 264;
     return(travel)
   }
+
+  console.log(distanceTravelledInFeet(43, 48));
+  console.log(distanceTravelledInFeet(50, 60));
+  console.log(distanceTravelledInFeet(34, 28));//1584
 
   function calculatesFarePrice(start, destination) {
     const distanceInFeet = Math.abs(destination - start) * 264;
@@ -35,4 +41,9 @@ function distanceFromHqInBlocks(station) {
       return 'cannot travel that far';
     }
   }
+
+  console.log(calculatesFarePrice(43, 44));
+  console.log(calculatesFarePrice(34, 32));
+  console.log(calculatesFarePrice(50, 58));
+  console.log(calculatesFarePrice(34, 24));
   
